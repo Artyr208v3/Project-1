@@ -45,6 +45,10 @@ h1 {
 input:focus {
     outline: none;
 }
+a {
+text-decoration: none;
+color: black;
+}
 .form__box-link {
 font-size: 16px;
 text-decoration:none;

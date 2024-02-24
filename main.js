@@ -16,3 +16,9 @@ controllers.forEach((controller, index) => {
     setProgress(controller.value, index);
   };
 })
+
+async function getUserRoles() {
+    const responce =  await fetch('http://localhost:5000/auth/user', {
+      
+    })
+}

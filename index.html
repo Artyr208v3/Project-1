@@ -6,22 +6,48 @@
     <link rel="stylesheet" href="./style/style.css" />
     <title>Статистика друзей</title>
     <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();
-  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
 
-  ym(96568119, "init", {
-       clickmap:true,
-       trackLinks:true,
-       accurateTrackBounce:true,
-       webvisor:true
-  });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/96568119" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+      ym(96568119, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/96568119"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
   </head>
   <body>
     <header>
@@ -52,7 +78,9 @@
         <button class="login_btn">
           <a href="auth_pages/auth.html">Войти</a>
         </button>
-        <button class="registration_btn"><a href="auth_pages/registration.html">Регистрация</a></button>
+        <button class="registration_btn">
+          <a href="auth_pages/registration.html">Регистрация</a>
+        </button>
         <img src="image/utils/user.png" alt="user_avatar" class="user_avatar" />
       </div>
     </header>
@@ -250,8 +278,10 @@
         <p class="RadialProgress10"></p>
       </form>
     </fieldset>
+    <section>
+      <button class="fanfik_btn" onclick="window.location.href='pages/fanfik_menu.html'">Fanfik</button>
+    </section>
 
-    <p>Ответь на вопрос!</p>
     <script src="main.js"></script>
   </body>
 </html>

@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 100%;
+    background-color: blueviolet;
+    margin: 0;
+    padding: 30px 100px 0px;
+}
+.wrapper {
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 550px;
+    border-radius: 20px;
+}
+.content_font {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    word-spacing: 8px;
+    line-height: 24px;
+}

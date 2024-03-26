@@ -1,197 +1,248 @@
-
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 fieldset {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    max-width: 95%;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 95%;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 legend {
-    font-size: 24px;
+  font-size: 24px;
 }
 form {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  flex-direction: column;
+  width: 150px;
+  border: 2.5px black solid;
+  border-radius: 20px;
+}
+header {
+  display: grid;
+  grid-template-columns: 2.5fr 3fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  align-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: gray;
+  align-self: center;
+}
+h1 {
+  color: white;
+  text-shadow: #d5d5d5 1px 0px 10px;
+  margin-left: 50px;
+}
+input:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 25%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+}
+.modal-content_text {
+  font-size: 28px;
+}
+.modal-content_desc {
+    font-size: 20px;
+}
+
+.close {
+  color: #aaa;
+  font-size: 35px;
+  font-weight: bold;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.form__box-link {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+.form__box-btn {
+  padding: 10px;
+  width: 140px;
+  background-color: rgb(214, 214, 214);
+  border: none;
+  border-radius: 40px;
+}
+.search {
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  padding: 8px;
+  height: 30px;
+  align-items: center;
+}
+.search_btn {
+  padding: 0;
+  margin-left: 7px;
+  height: 28px;
+  width: 32px;
+  background-image: url(../image/utils/search.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;
+  border: none;
+  cursor: pointer;
+}
+.search_input {
+  background-color: #808080;
+  opacity: 50%;
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 0px 5px 12px;
+  font-size: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
+  caret-color: white;
+}
+.social_blade {
+  display: flex;
+  margin-left: 10px;
+  gap: 20px;
+  align-items: center;
+}
+.social_btn {
+  width: 40px;
+  height: 40px;
+  background-color: #808080;
+  border: none;
+  cursor: pointer;
+}
+.social_img {
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+}
+.user {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.user_avatar {
+  border: none;
+  background-color: white;
+  padding: 2px;
+  border-radius: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.login_btn {
+  border-radius: 12px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.registration_btn {
+  background-color: white;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.fanfik_btn {
+  display: flex;
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-color: #d6d6d6;
+  border-radius: 20px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 28px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/orbitron/v31/yMJRMIlzdpvBhQQL_Qq7dy0.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@media (max-width: 768px) {
+  fieldset {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  legend {
+    font-size: 20px;
+  }
+  form {
     padding: 5px;
     display: flex;
     align-items: center;
     font-size: 20px;
     flex-direction: column;
-    width: 150px;
+    width: 90%;
     border: 2.5px black solid;
     border-radius: 20px;
-}
-header {
-    display: grid;
-    grid-template-columns: 2.5fr 3fr 1fr 2fr;
-    grid-template-rows: 1fr;
-    align-content: center;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-    background-color: gray;
-    align-self: center;
-}
-h1 {
-    color: white;
-    text-shadow: #d5d5d5 1px 0px 10px;
-    margin-left: 50px;
-}
-input:focus {
-    outline: none;
-}
-a {
-text-decoration: none;
-color: black;
-}
-.form__box-link {
-font-size: 16px;
-text-decoration:none;
-color: white;
-}
-.form__box-btn {
-    padding: 10px;
-    width: 140px;
-    background-color:rgb(214, 214, 214);
-    border: none;
-    border-radius: 40px;
-}
-.search {
-margin-top: 10px;
-background-color: white;
-border-radius: 20px 20px 0 0;
-display: flex;
-padding: 8px;
-height: 30px;
-align-items: center;
-}
-.search_btn {
-    padding: 0;
-    margin-left: 7px;
-    height: 28px;
-    width: 32px;
-    background-image: url(../image/utils/search.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 25px 25px;
-    border: none;
-    cursor: pointer;
-}
-.search_input {
-    background-color: #808080;
-    width: 100%;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 5px 0px 5px 12px;
-    font-size: 22px;
-    margin-left: 10px;
-    margin-right: 10px;
-    caret-color: white;
-
-}
-.social_blade {
-    display: flex;
-    margin-left: 10px;
-    gap: 20px;
-    align-items: center;
-}
-.social_btn {
-    width: 40px;
-    height: 40px;
-    background-color: #808080;
-    border: none;
-    cursor: pointer;
-}
-.social_img {
-    width: 24px;
-    height: 24px;
-    opacity: 1;
-}
-.user {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    gap: 5px;
-}
-.user_avatar {
-border: none;
-background-color: white;
-padding: 2px;
-border-radius: 20px;
-margin-right: 10px;
-cursor: pointer;
-}
-.login_btn {
-border-radius: 12px;
-border: none;
-background-color: white;
-cursor: pointer;
-}
-.registration_btn {
-background-color: white;
-border-radius: 12px;
-border: none;
-cursor: pointer;
-}
-
-.fanfik_btn {
-    display: flex;
-    width: 150px;
-    height: 50px;
-    border: none;
-    background-color: #d6d6d6;
-    border-radius: 20px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 28px;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-}
-@font-face {
-    font-family: 'Orbitron';
-    font-style: normal;
-    font-weight: 400 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/orbitron/v31/yMJRMIlzdpvBhQQL_Qq7dy0.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
-@media (max-width: 768px) {
-    
-    fieldset {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    }
-    legend {
-        font-size: 20px;
-    }
-    form {
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        font-size: 20px;
-        flex-direction: column;
-        width: 90%;
-        border: 2.5px black solid;
-        border-radius: 20px;
-    }
-    .form__box-btn {
-        width: 90%;
-    }
-    input {
-        width: 90%;
-    }
-    p {
-        margin: 3.5px;
-    }
+  .form__box-btn {
+    width: 90%;
+  }
+  input {
+    width: 90%;
+  }
+  p {
+    margin: 3.5px;
+  }
 }

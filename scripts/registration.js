@@ -6,6 +6,7 @@ async function registration() {
     const email = document.getElementById("input_email").value;
     const password = document.getElementById("input_password").value;
     const Json = JSON.stringify({ name, surname, email, password });
+    console.log(Json);
     const responce = await fetch('http://localhost:5000/auth/registration', {
         method: "POST",
         body: Json,
@@ -18,7 +19,7 @@ async function registration() {
         alert("Пользователь с таким email уже существует");
     } else {
         alert("Регистрация прошла успешно");
-        window.location.href = "../auth_pages/profile_page.html";
+        // window.location.href = "../auth_pages/profile_page.html";
     }
 
 }

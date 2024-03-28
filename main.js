@@ -17,12 +17,6 @@ controllers.forEach((controller, index) => {
   };
 })
 
-async function getUserRoles() {
-    const responce =  await fetch('http://localhost:5000/auth/user', {
-      
-    })
-}
-
 const modal = document.getElementById("myModal");
 const btn = document.getElementById("openModal");
 const span = document.getElementsByClassName("close")[0];
